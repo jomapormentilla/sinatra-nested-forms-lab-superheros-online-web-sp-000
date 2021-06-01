@@ -1,12 +1,9 @@
-<h1>Teams</h1>
+<h1><%= @name %></h1>
+<h2><%= @motto %></h2>
 
-<table>
-    <tbody>
-        <% @teams.each do |team| %>
-            <tr><td>Name: <%= team[:name] %></td>
-                <td>Power: <%= team[:power] %></td></tr>
-        <% end %>
-    </tbody>
-</table>
-
+<% @members.each do |member| %>
+    <h2><%= member[:name] %></h2>
+    <p>Hero Power: <%= member[:power] %></p>
+    <p>Hero Biography: <%= member[:bio] %></p>
+<% end %>
 
